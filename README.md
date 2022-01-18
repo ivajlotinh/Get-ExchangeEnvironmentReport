@@ -11,11 +11,12 @@ This script creates an HTML report showing the following information about an Ex
 The report shows the following:
 
 * As summary
+
   * Total number of servers per Exchange Server version
   * Total number of mailboxes per On-Premises Exchange Server version, Office 365, and Exchange Organisation
   * Total number of Exchange Server functional roles
-
 * Per Active Directory Site
+
   * Total number of mailboxes
   * Internal, External, and CAS Array names
   * Exchange Server computers
@@ -24,8 +25,8 @@ The report shows the following:
     * Number of preferred and maximum active databases
     * Functional Roles
     * Operating System with Service Pack
-
 * Per Database Availability Group
+
   * Total number of member servers
   * List of member servers
   * DAG databases
@@ -38,8 +39,8 @@ The report shows the following:
     * Circular logging enabled
     * Mailbox server hosting an active copy
     * List of mailbox servers hosting database copies
-
 * Per Database (Non-DAG, pre-DAG Exchange Server)
+
   * Storage group and database name
   * Server name hosting the database
   * Number of mailboxes and average mailbox size
@@ -64,7 +65,7 @@ The PowerShell script does not gather information on public folders or analyzes 
 * 2.2 : Bug fixes and enhancements
   * CCS fixes for Html header tags (issue #5)
   * New script parameter _ShowDriveNames_ added to optionally show drive names for EDB/LOG file paths in database table (issue #4)
-  * Exchange organization name added to report header  
+  * Exchange organization name added to report header
 
 ## Example Report
 
@@ -111,7 +112,7 @@ Include drive names of EDB file path and LOG file folder in database report tabl
 
 Generate an HTML report and send the result as HTML email with attachment to the specified recipient using a dedicated smart host
 
-``` PowerShell
+```PowerShell
 .\Get-ExchangeEnvironmentReport.ps1 -HTMReport ExchangeEnvironment.html -SendMail -ViewEntireForet $true -MailFrom roaster@mcsmemail.de -MailTo grillmaster@mcsmemail.de -MailServer relay.mcsmemail.de
 ```
 
@@ -119,7 +120,7 @@ Generate an HTML report and send the result as HTML email with attachment to the
 
 Generate an HTML report and save the report as 'report.html'
 
-``` PowerShell
+```PowerShell
 .\Get-ExchangeEnvironmentReport.ps1 -HTMLReport .\report.html
 ```
 
@@ -127,7 +128,7 @@ Generate an HTML report and save the report as 'report.html'
 
 Generate the HTML report including EDB and LOG drive names
 
-``` PowerShell
+```PowerShell
 .\Get-ExchangeEnvironmentReport.ps1 -ShowDriveNames -HTMLReport .\report.html
 ```
 
