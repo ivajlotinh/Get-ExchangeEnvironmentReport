@@ -1,1 +1,1 @@
-.\Get-ExchangeEnvironmentReport.ps1 -HTMLReport ExchangeEnvironment.html -SendMail -ViewEntireForest $true -MailFrom roaster@mcsmemail.de -MailTo grillmaster@mcsmemail.de -MailServer relay.mcsmemail.de
+.\Get-ExchangeEnvironmentReport.ps1 -HTMLReport ClariosExchangeEnvironment.html -SendMail -ViewEntireForest $true -MailFrom 'report@clarios.com' -MailTo 'ivajlo.tinh-ext@clarios.com' -MailServer 'smtp.clarios.com'
